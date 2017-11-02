@@ -1,0 +1,19 @@
+<view class="container">
+  <!-- 头部 -->
+  <view class="header">
+    <view class="group">
+      <image src="{{userInfo.avatarUrl}}" />
+      <text class="name">{{userInfo.nickName}}</text>
+    </view>
+  </view>
+  <!-- 分割线 -->
+  <view class="line"></view> 
+  <!-- 金额列表 -->
+  <view class="price-list">
+    <view class="item" wx:for="{{prices}}" wx:key="item" data-item="{{item}}" bindtap="selectItem">
+      <view class="price-box {{selected==item ? 'active' : ''}}">
+        <em><text class="price">{{item}}</text>  元</em> 
+      </view>
+    </view>
+  </view>
+</view>
